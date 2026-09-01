@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.page-container{
+  display: grid;
+  /* background-color: yellow; */
+  grid-template-columns: 200px 1fr;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}

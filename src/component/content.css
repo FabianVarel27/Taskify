@@ -1,0 +1,192 @@
+.main-content{
+    padding: 40px;
+    color: black;
+    box-sizing: border-box;
+    margin-left: 100px;
+    width: 200vh;
+    margin-bottom: 50px;
+    /* background-color: yellow; */
+}
+
+.dashbord-content{
+    /* background-color: grey; */
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.today-overview{
+    display: grid;
+    width: auto;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.time-now{
+    display: flex;
+    /* justify-content: space-between;  */
+    gap: 10px;
+}
+
+.today-list{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 5px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.today-list h3{
+    margin-left: 10px;
+}
+
+.today-list .total-list{
+    font-size: 20px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    color: black;
+}
+
+.today-list .total-list .score{
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1;
+}
+
+.divider{
+    color: grey;
+}
+
+.upcoming-content{
+    /* background-color: red; */
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upcoming-box {
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+    height: 250px;
+
+    display: flex; /* Tambahkan display flex agar flex-direction berfungsi */
+    flex-direction: column;
+    
+    /* Ubah ke overflow-y auto agar scrollbar horizontal tidak muncul */
+    overflow-y: auto; 
+    /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5); */
+    gap: 15px;
+}
+
+.upcoming-box::after{
+    content: "";
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.upcoming-box::-webkit-scrollbar {
+    width: 14px;
+}
+
+/* 2. Beri jarak border transparan di atas dan bawah track */
+.upcoming-box::-webkit-scrollbar-track {
+    background: transparent;
+    border-top: 10px solid transparent;    /* Spasi atas */
+    border-bottom: 10px solid transparent; /* Spasi bawah */
+    background-clip: padding-box;
+}
+
+/* 3. Atur tampilan batang scrollbar (thumb) */
+.upcoming-box::-webkit-scrollbar-thumb {
+    background-color: #bababa;
+    border-radius: 10px;
+    border: 3px solid transparent;         /* Membuat thumb lebih ramping */
+    background-clip: padding-box;
+}
+
+.upcoming-card{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 13px;
+    /* margin: 15px; */
+    height: 100px;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.header-upcoming-card{
+    display: flex;
+
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.header-upcoming-card span{
+    font-size: 18px;
+}
+
+.content-upcoming-card{
+    margin-bottom: 10px;
+
+    font-size: 15px;
+}
+
+.grafik-habits-content{
+    margin-top: 20px;
+}
+
+.upcoming-header{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.upcoming-search{
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 10px;
+}
+
+.upcoming-search > button{
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.upcoming-search > input{
+    border-radius: 5px;
+}
+
+.upcoming-btn-filter{
+    display: flex;
+    gap: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.btn-filter{
+    padding: 3px 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}

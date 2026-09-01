@@ -1,0 +1,136 @@
+.calendar{
+    width: 100%;
+    border-radius: 10px;
+    height: 100vh;
+    padding: 20px;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.react-calendar__viewContainer,
+.react-calendar__month-view,
+.react-calendar__month-view > div,
+.react-calendar__month-view > div > div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.react-calendar__month-view__days {
+    flex-grow: 1;
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr); /* 7 kolom untuk Senin-Minggu */
+    grid-template-rows: repeat(6, 1fr);    /* 6 baris untuk minggu dalam sebulan */
+    height: 100%;
+}
+
+.calendar-content{
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 10px;
+}
+
+.list-tasks-calendar{
+    background-color: rgb(252, 222, 222);
+    border-radius: 10px;
+    padding: 10px;
+
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    gap: 10px;
+}
+
+.add-task{
+    background-color: burlywood;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.list-task-calendar-content{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.task{
+    background-color: rgb(192, 190, 190);
+    height: auto;
+    padding: 10px;
+    padding-bottom: 20px ;
+    padding-top: 20px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-rows: 10px 1fr;
+
+    align-items: center;
+    border-radius: 5px;
+}
+.task-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+}
+
+.task-header > span{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.task-header > p{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.task-btn-filter{
+    width: auto;
+    display: flex;
+    gap: 8px;
+    justify-content: right;
+    margin-bottom: 10px;
+}
+
+.task-btn-filter > button{
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 12px;
+    width: 30px;
+
+    cursor: pointer;
+}
+
+/* Efek latar belakang gelap menutupi layar */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 9999; */
+}
+
+/* Kotak form */
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}

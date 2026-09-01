@@ -1,0 +1,23 @@
+.sidebar{
+    background-color: red;
+    padding: 24px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li{
+    margin-bottom: 15px;
+}
+
+.sidebar a{
+    color: white;
+    text-decoration: none;
+}
+
