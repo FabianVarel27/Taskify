@@ -179,27 +179,32 @@ export default function Habits() {
                         </div>
                     </div>
                             
-                    <div className="checklist-body">
-                        {habitsData.map((habit) => (
-                            <div className="card-habit" key={habit.id}>
-                                <span>{habit.name}</span>
-
-                                <div className="checkbox-row">
-                                    {weekDays.map(day => {
-                                        const currentLog = habitLogData.find(log => log.habit_id === habit.id && log.date === day.date)
-                                        const isDoneStatus = currentLog? currentLog.is_done : false;
-
-                                        return(
-                                            <input type="checkbox"
-                                            key={day.name}
-                                            disabled={day.isPassed}
-                                            checked={isDoneStatus} 
-                                            onChange={() => changeCheckbox(habit.id, day.date, isDoneStatus)}/>
-                                        )
-                                    })}
-                                </div>
+                    <div className="checklist-content">
+                        
+                            <div className="card-habit">
+                                {habitsData.map((habit) => (
+                                    <span>{habit.name}</span>
+                                ))}
                             </div>
-                        ))}
+                            
+                            <div className='checklist-body'>
+                                {habitsData.map((habit) => (
+                                    <div className="checkbox-row">
+                                            {weekDays.map(day => {
+                                                const currentLog = habitLogData.find(log => log.habit_id === habit.id && log.date === day.date)
+                                                const isDoneStatus = currentLog? currentLog.is_done : false;
+
+                                                return(
+                                                    <input type="checkbox"
+                                                    key={day.name}
+                                                    disabled={day.isPassed}
+                                                    checked={isDoneStatus} 
+                                                    onChange={() => changeCheckbox(habit.id, day.date, isDoneStatus)}/>
+                                                )
+                                            })}
+                                    </div>
+                                ))}
+                            </div>
                     </div>
                 </div>
 

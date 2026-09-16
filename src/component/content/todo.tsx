@@ -79,42 +79,45 @@ export default function Todo(){
     }
 
     return(
-        <div className="calendar-content">
-            <Calendar onChange={handleTanggalChange} value={tanggal} className='calendar'/>
-
-            <div className="list-tasks-calendar">
-                <button className="add-task" onClick={() => setIsAdding(true)}>+ Add Task</button>
-
-                <div className="list-task-calendar-content">
-                    {listTask.length > 0? (listTask.map((task) => (
-                        <div className="task" key={task.id}>
-                            <div className="task-btn-filter">
-                                <button onClick={() => handleActionTask('delete', task)}>-</button>
-                                <button onClick={() => handleActionTask('done', task)}>V</button>
-                                <button>edit</button>
-                            </div>
-
-                            <div className="task-header">
-                                <span>{task.title}</span>
-                                <p>this is The Description of task</p>
-                            </div>
-                        </div>
-
-                       
-                    ))
-                    ) : (
-                        <p>Tidak ada</p>
-                    )}
-                    
+        <div className="container">
+            <div className="header">
+                <div className="title-header">
+                    <h1>List Task</h1>
+                    <h4>Manage your task, stay focused, get things done.</h4>
                 </div>
+
+                <input type="search" placeholder="search task..." className="search"/>
             </div>
 
-            {isAdding && (
-                <AddTask 
-                    onClose={() => setIsAdding(false)}
-                    selectedDate = {tanggal}
-                    refreshTasks = {() => handleShowTaskCalendar(tanggal!)}/>
-            )}
+            <div className="container-btn-filter">
+                <div className="list-btn-filter">
+                    <button className="btn-filter btn-activated">All</button>
+                    <button className="btn-filter">Today</button>
+                    <button className="btn-filter">Upcoming</button>
+                    <button className="btn-filter">Completed</button>
+                </div>
+
+                <button className="btn-add-task">
+                    + Add Task
+                </button>
+            </div>
+
+            <div className="container-task">
+                <div className="list-filter">
+                    <div className="filter">
+                        <span>Category</span>
+                    </div>
+                    <div className="filter">
+                        <span>Sort By</span>
+                    </div>
+                </div>
+
+                <div className="container-card-task">
+                    <div className="card-task">Card name</div>
+                    <div className="card-task">Card name</div>
+                    <div className="card-task">Card name</div>
+                </div>
+            </div>
         </div>
     )
 }

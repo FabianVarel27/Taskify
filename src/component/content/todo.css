@@ -1,136 +1,111 @@
-.calendar{
+:root{
+    --primary-color : #4A1D77;
+    --primary-color-deactivated : #9475b4;
+    --btn-color-activated : #1D771D;
+    --btn-color-deactivated: #A9F3A9;
+    --background-color : white;
+    --card-bg: #EDEDED;
+    --color-text: white;
+    --color-text-primary: black;
+}
+
+.container{
     width: 100%;
+    height: 100vh;
+    /* background-color: yellow; */
+}
+
+.header{
+    /* background-color: var(--primary-color); */
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    align-items: center;
+    padding: 5px;
+
+    margin-bottom: 30px;
+}
+
+.search{
+    height: 30px;
     border-radius: 10px;
+    border: none;
+    background-color: var(--card-bg);
+    padding: 0px 10px;
+}
+
+.container-btn-filter{
+    display: flex;
+    background-color: var(--card-bg);
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.list-btn-filter{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-activated{
+    background-color: var(--btn-color-activated) !important;
+    color: white !important;
+}
+
+.btn-filter{
+    width: 180px;
+    height: 50px;
+    background-color: var(--btn-color-deactivated);
+    color: black;
+}
+
+.btn-add-task{
+    width: 150px;
+    background-color: white;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+.container-task{
+    background-color: var(--card-bg);
+    margin-top: 20px;
     height: 100vh;
     padding: 20px;
-    font-weight: 500;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.react-calendar__viewContainer,
-.react-calendar__month-view,
-.react-calendar__month-view > div,
-.react-calendar__month-view > div > div {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.react-calendar__month-view__days {
-    flex-grow: 1;
-    display: grid !important;
-    grid-template-columns: repeat(7, 1fr); /* 7 kolom untuk Senin-Minggu */
-    grid-template-rows: repeat(6, 1fr);    /* 6 baris untuk minggu dalam sebulan */
-    height: 100%;
-}
-
-.calendar-content{
-    display: grid;
-    grid-template-columns: 1fr 250px;
-    gap: 10px;
-}
-
-.list-tasks-calendar{
-    background-color: rgb(252, 222, 222);
     border-radius: 10px;
-    padding: 10px;
+}
 
-    display: grid;
-    grid-template-rows: 50px 1fr;
+.list-filter{
+    display: flex;
+    align-items: center;
+    width: 100%;
     gap: 10px;
 }
 
-.add-task{
-    background-color: burlywood;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    
-    padding-left: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.list-task-calendar-content{
-    padding: 5px;
+.filter{
     display: flex;
     flex-direction: column;
-
-    gap: 15px;
-}
-
-.task{
-    background-color: rgb(192, 190, 190);
-    height: auto;
-    padding: 10px;
-    padding-bottom: 20px ;
-    padding-top: 20px;
-    padding-left: 10px;
-    display: grid;
-    grid-template-rows: 10px 1fr;
-
-    align-items: center;
-    border-radius: 5px;
-}
-.task-header{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-
-    justify-content: center;
-}
-
-.task-header > span{
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.task-header > p{
-    font-weight: 100;
-    font-size: 12px;
-}
-
-.task-btn-filter{
-    width: auto;
-    display: flex;
-    gap: 8px;
-    justify-content: right;
-    margin-bottom: 10px;
-}
-
-.task-btn-filter > button{
-    border: none;
-    background-color: green;
+    height: 50px;
+    width: 250px;
+    background-color: var(--primary-color);
     color: white;
-    font-size: 12px;
-    width: 30px;
-
-    cursor: pointer;
-}
-
-/* Efek latar belakang gelap menutupi layar */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
-    /* z-index: 9999; */
 }
 
-/* Kotak form */
-.modal-content {
+.container-card-task{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 100%;
+    gap: 10px;
+}
+
+.card-task{
     background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    width: 350px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    height: 80px;
+    padding: 20px;
+    border-radius: 10px;
 }

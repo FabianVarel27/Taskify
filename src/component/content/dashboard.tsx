@@ -188,9 +188,9 @@ export default function Dashboard(){
                     <div className="grafik-habits" style={{ height: '300px', width: '100%', marginTop: '20px' }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <LineChart data={weeklyChartData}>
-                                <CartesianGrid strokeDasharray="1 1" vertical={false}/>
-                                <XAxis dataKey="name" axisLine={true} tickLine={true} />
-                                <YAxis axisLine={true} tickLine={true} tickFormatter={(tick) => `${tick}%`} />
+                                <CartesianGrid strokeDasharray="1 1" vertical={true}/>
+                                <XAxis dataKey="name" axisLine={true} tickLine={true} className='XAxis'/>
+                                <YAxis axisLine={true} tickLine={true} tickFormatter={(tick) => `${tick}%`} className='YAxis' />
                                 <Tooltip />
                                 <Legend iconType="circle" />
                                 

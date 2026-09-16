@@ -1,6 +1,17 @@
+:root{
+    --primary-color : #4A1D77;
+    --btn-color-activated : #1D771D;
+    --btn-color-deactivated: #A9F3A9;
+    --background-color : white;
+    --card-bg: #EDEDED;
+    --color-text: white;
+    --color-text-primary: black;
+}
+
 .sidebar{
-    background-color: red;
+    background-color: var(--primary-color);
     padding: 24px;
+    width: 150px;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -17,7 +28,7 @@
 }
 
 .sidebar a{
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
 }
 
